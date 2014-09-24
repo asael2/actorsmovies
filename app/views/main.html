@@ -1,13 +1,19 @@
-<div class="jumbotron">
+<div class="jumbotron" ng-controller= "MainCtrl">
   
   <h2>Find a Movie</h2>
-  
+  <br>
   <h4>Write an actor</h4>
   
-  <form class="lead">
-    <input type="text">
-  </form>
+    <input ng-model="searchTerm" type="text">
+    <br> <br>
+	<p>
+  		<a id="searchBtn" class="btn btn-lg btn-success" ng-click="fetchData()"> Search movie</a> 		
+	</p>
 
-  <a id="searchBtn" class="btn btn-lg btn-success" ng-href="#">Search </a></p>
+	<ul>
+		<li ng-repeat= "peli in pelis">
+			{{peli.title}}
+		</li>
+	</ul>
 
 </div>
