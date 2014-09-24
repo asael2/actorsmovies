@@ -77,3 +77,8 @@ body {
     border-bottom: 0;
   }
 }
+
+.actors-list{
+  max-height: 400px;
+  overflow: auto;
+}

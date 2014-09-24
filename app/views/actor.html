@@ -1,0 +1,26 @@
+<div class="actorPage" ng-init="fetchActorMovies()">	
+	<h4>List of movies for <b>{{actorName}}</b></h4>
+	<br>
+	<section>
+	<table class="table table-striped">  
+		<thead>
+		  <tr>
+		    <th>
+		      <a href="#" ng-click="orderByField='title'; reverseSort = !reverseSort"> Movie Title <span ng-show="orderByField == 'title'"><span ng-show="!reverseSort">^</span><span ng-show="reverseSort">v</span></span></a>
+		    </th>
+		    <th>
+		      <a href="#" ng-click="orderByField='release_date'; reverseSort = !reverseSort">Release date <span ng-show="orderByField == 'release_date'"><span ng-show="!reverseSort">^</span><span ng-show="reverseSort">v</span></span></a>
+		    </th>
+		    <th>Poster</th>
+		  </tr>
+		</thead>
+		<tbody>
+		  <tr ng-repeat="movie in movies|orderBy:orderByField:reverseSort">
+		    <td><h5>{{movie.title}}</h5></td>
+		    <td>{{movie.release_date}}</td>
+		    <td><img src="http://image.tmdb.org/t/p/w396{{movie.poster_path}}" width="100" height="150" alt="Poster"></td>
+		  </tr>
+		</tbody>
+	</table>
+	</section>
+</div>

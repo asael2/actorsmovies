@@ -1,19 +1,13 @@
-<div class="jumbotron" ng-controller= "MainCtrl">
+<div class="jumbotron"  ng-init="fetchOptions()">
   
-  <h2>Find a Movie</h2>
+  <h2>Find Movies</h2>
   <br>
-  <h4>Write an actor</h4>
-  
-    <input ng-model="searchTerm" type="text">
-    <br> <br>
-	<p>
-  		<a id="searchBtn" class="btn btn-lg btn-success" ng-click="fetchData()"> Search movie</a> 		
-	</p>
+  <h4>Type actor's name</h4>
 
-	<ul>
-		<li ng-repeat= "peli in pelis">
-			{{peli.title}}
-		</li>
-	</ul>
+    <input id="searchBox" ng-model="searchTerm" type="text" ng-keyup='fetchResults()'>
+	<br><br>
+	<div class="list-group actors-list">
+		<a href="/#/actor/{{actor.id}}/{{actor.name}}" class="list-group-item" ng-repeat= "actor in actors">{{actor.name}}</a> 
+	</div>	
 
 </div>

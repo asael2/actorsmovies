@@ -24,11 +24,23 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      // .when('/about', {
-      //   templateUrl: 'views/about.html',
-      //   controller: 'AboutCtrl'
-      // })
+      .when('/actor/:actorId/:actorName?', {
+        templateUrl: 'views/actor.html',
+        controller: 'ActorCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
-  });
+  })
+  .directive('a', function() { // This directive avoids redirection on hash "#" links.
+    return {
+        restrict: 'E',
+        link: function(scope, elem, attrs) {
+            if(attrs.href === '#'){
+                elem.on('click', function(e){
+                    e.preventDefault();
+                });
+            }
+        }
+   };
+}); ;
