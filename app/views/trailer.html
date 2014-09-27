@@ -1,13 +1,24 @@
+
 <div class="jumbotron dark" ng-init="getTrailer()">
-	<div class="trailerVideo">
+	
+	<div ng-show="!hasTrailer" class="backdrop_path" style="background: url(http://image.tmdb.org/t/p/w396{{backdrop_path}}) no-repeat center">No trailer available</div>
+	
+	<div ng-show="hasTrailer" class="trailerVideo">
 		<div my-youtube code="code"></div>
 	</div>
+
 </div>
 
+
+
 <div class="panel panel-default">
-	<div class="panel-heading">{{title}}</div>
-	<div class="panel-body">
-		{{overview}}
-	</div>
-	 <div class="panel-footer"><a href="{{website}}"> website </a></div>
+
+	<div class="panel-heading"><h4>{{title}}</h4></div>
+	<div class="panel-body">{{overview}}</div>
+	 <!-- List group -->
+	<ul class="list-group">
+		<li class="list-group-item">Reslease date: {{release_date}}</li>
+		<li class="list-group-item">Website: <a href="{{website}}" target="blank"> {{website}} </a></li>
+	</ul>
+
 </div>

@@ -20,11 +20,12 @@ angular.module('thepelisApp').controller('MainCtrl', function ($scope, $http) {
 		letters = /^[A-Za-z]+$/; 
 
 		$scope.fetchResults = function(e) {
+			var ev = e;
 			// console.log("evento= " + e.keyCode);
 			//if ( (e.keyCode >= 65 && e.keyCode <= 90) || e.keyCode == 8 || e.keyCode == 46 ) {
 
    			// if( $scope.searchTerm.match(letters) || ){
-   			if( $scope.searchTerm != "" ){
+   			if( $scope.searchTerm !== "" &&  ev.keyCode !== 8 &&  ev.keyCode !== 46){
 
 		    	$http.get(apiUrl+mode+apiKey+$scope.searchTerm+'&search_type=ngram').success(function(data){
 		    		$scope.actors = data.results;

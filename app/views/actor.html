@@ -2,7 +2,7 @@
 	<h3>List of movies for <b>{{actorName}}</b></h3>
 	<br>	
 	<section class="jumbotron">
-		<table class="table table-striped">  
+		<table class="table">  
 			<thead>
 			  <tr>
 			    <th>
@@ -11,34 +11,15 @@
 			    <th>
 			      <a href="#" ng-click="orderByField='release_date'; reverseSort = !reverseSort">Release date <span ng-show="orderByField == 'release_date'"><span ng-show="!reverseSort">^</span><span ng-show="reverseSort">v</span></span></a>
 			    </th>
-			    <th>Trailer</th>
+			    <th></th>
 			  </tr>
 			</thead>
 			<tbody>
 			  <tr ng-repeat="movie in movies|orderBy:orderByField:reverseSort">
-			    <td><h5>{{movie.title}}</h5></td>
+			    <td><h5><a href="/#/trailer/{{movie.id}}/{{actorName}}">{{movie.title}}</a></h5></td>
 			    <td>{{movie.release_date}}</td>
 			  	<td> 
-			  		<!-- <a class="moviePoster" href="http://image.tmdb.org/t/p/w396{{movie.poster_path}}" data-toggle="modal" data-target="#myModal_{{movie.id}}"> <img src="http://image.tmdb.org/t/p/w396{{movie.poster_path}}" width="92" height="136" alt="Poster"> </a> -->
-					<a href="/#/trailer/{{movie.id}}/{{actorName}}"> <img src="http://image.tmdb.org/t/p/w396{{movie.poster_path}}" width="92" height="136" alt="Poster" alt="View Trailer"> </a>
-					<!-- Modal -->
-					<!-- <div class="modal fade" id="myModal_{{movie.id}}" >
-					  <div class="modal-dialog">
-					    <div class="modal-content">
-					      <div class="modal-header">
-					        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-					        <h4 class="modal-title">{{movie.title}}</h4>
-					      </div>
-					      <div class="modal-body">
-					        {{movie.id}}
-								<div class="embed-responsive embed-responsive-16by9">
-								 	<iframe class="embed-responsive-item" src="http://www.youtube.com/embed/6NbAAmDuv_8?feature=player_detailpage"></iframe>
-								</div>
-					      </div>
-					      
-					    </div>
-					  </div>
-					</div> -->
+					<a ng-show="{{movie.poster_path}}" href="/#/trailer/{{movie.id}}/{{actorName}}"> <img src="http://image.tmdb.org/t/p/w396{{movie.poster_path}}" width="92" height="136" alt="Poster" alt="View Trailer"> </a>
 			  	</td>
 			  </tr>
 			</tbody>

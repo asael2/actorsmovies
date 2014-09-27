@@ -19,10 +19,14 @@ angular.module('thepelisApp').controller('TrailerCtrl', function ($scope, $http,
 
 		$http.get('https://api.themoviedb.org/3/movie/'+movieId+'?api_key=7d01deb61b99198006a40696c46d3f29&append_to_response=trailers').success(function(data){
 			console.log(data);
-			$scope.code = data.trailers.youtube[0].source;
 			$scope.title = data.title;
+			$scope.release_date = data.release_date;
 			$scope.overview = data.overview;
 			$scope.website = data.homepage;	
+			$scope.backdrop_path = data.backdrop_path;
+			$scope.hasTrailer = data.trailers.youtube.length;
+			$scope.hasTrailer ? $scope.code = data.trailers.youtube[0].source : "";
+			// $scope.code = data.trailers.youtube[0].source;
 		})
 
     };

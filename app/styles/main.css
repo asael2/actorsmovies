@@ -66,6 +66,14 @@ body {
 .jumbotron.dark {
   background: black;
 }
+
+.jumbotron table > thead > tr > th:nth-child(2){
+  width: 25%;
+}
+
+.jumbotron table >td{
+  text-align: left;
+}
 /* Supporting marketing content */
 .marketing {
   margin: 40px 0;
@@ -106,4 +114,10 @@ a.glyphicon.glyphicon-search {
 a.moviePoster{
   background: url(http://d3a8mw37cqal2z.cloudfront.net/assets/e6497422f20fa74a240ad385ea4a2ade/images/no-poster-w92.jpg) no-repeat;
   display: block;
+}
+.backdrop_path{
+  background-repeat:no-repeat;
+  height: 200px;
+  width: 100%;
+
 }
