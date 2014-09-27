@@ -12,6 +12,8 @@
 // http://api.themoviedb.org/3/search/person?api_key=7d01deb61b99198006a40696c46d3f29&query=brad%20pitt
 
 angular.module('thepelisApp').controller('MainCtrl', function ($scope, $http) {
+	$("body").css('background', 'url(../images/movies.jpg)');
+
 	var isHome = true,
 		apiUrl = 'http://api.themoviedb.org/3/',
 		mode = 'search/person',

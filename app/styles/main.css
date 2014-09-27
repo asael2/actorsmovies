@@ -1,35 +1,36 @@
-/* Space out content a bit */
+/*by @asael2*/
+
+html {
+  font-size: 10px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  height: 100%;
+  width: 100%;
+}
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  /*background: url(../images/movies.jpg);*/
-  /*background: url(http://3.bp.blogspot.com/_Lt9FgNveDDo/TMlZvmHhIzI/AAAAAAAAAfU/i7BUnjBOAVE/s1600/background.jpg);*/
-  /*-webkit-background-size: cover;
+  background: url(../images/movies.jpg) top left no-repeat;
+  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;*/
+  background-size: cover;
 }
-
 /* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
+.header, .marketing, .footer {
+    padding-left: 15px;
+    padding-right: 15px;
 }
-
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-}
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 40px;
-  padding-bottom: 19px;
-}
-
+  /* Make the masthead heading the same height as the navigation */
+  .header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+  }
+a.glyphicon.glyphicon-search {
+  text-decoration: none;
+  font-size: 1.3em;
+  word-spacing: -12px;
+} 
+  
 /* Custom page footer */
 .footer {
   padding-top: 19px;
@@ -41,51 +42,47 @@ body {
   background: whitesmoke;
   padding: 40px;
   border-radius: 10px;
-  -webkit-box-shadow: inset 0px 0px 3px 1px rgba(0,0,0,0.8);
--moz-box-shadow: inset 0px 0px 3px 1px rgba(0,0,0,0.8);
-box-shadow: inset 0px 0px 3px 1px rgba(0,0,0,0.8);
+  -webkit-box-shadow: inset 0px 0px 9px 1px rgba(66,139,202,0.9);
+  -moz-box-shadow: inset 0px 0px 9px 1px rgba(66,139,202,0.9);
+  box-shadow: inset 0px 0px 9px 1px rgba(66,139,202,0.9);
 }
-.container.jumbotron {
-background: black;
-}
+  .container.jumbotron {
+    background: black;
+    margin-top: 20px;
+  }
+  .container-narrow > hr {
+    margin: 30px 0;
+  }
+
 /* Customize container */
 @media (min-width: 768px) {
   .container {
     max-width: 730px;
   }
 }
-.container-narrow > hr {
-  margin: 30px 0;
-}
 
-/* Main marketing message and sign up button */
+
 .jumbotron {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
 }
-.jumbotron .btn {
-  font-size: 21px;
-  padding: 14px 24px;
-}
+  .jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+  }
 
-.jumbotron.dark {
-  background: black;
-}
+  .jumbotron.dark {
+    background: black;
+    text-align: center;
+  }
 
-.jumbotron table > thead > tr > th:nth-child(2){
-  width: 25%;
-}
+  .jumbotron table > thead > tr > th:nth-child(2){
+    width: 25%;
+  }
 
-.jumbotron table >td{
-  text-align: left;
-}
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-}
-.marketing p + h4 {
-  margin-top: 28px;
-}
+  .jumbotron table >td{
+    text-align: left;
+  }
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
@@ -111,18 +108,8 @@ background: black;
   overflow: auto;
 }
 
-a.glyphicon.glyphicon-search {
-  text-decoration: none;
-  font-size: 1.3em;
-  word-spacing: -12px;
-}
-a.moviePoster{
-  background: url(http://d3a8mw37cqal2z.cloudfront.net/assets/e6497422f20fa74a240ad385ea4a2ade/images/no-poster-w92.jpg) no-repeat;
-  display: block;
-}
 .backdrop_path{
   background-repeat:no-repeat;
   height: 200px;
   width: 100%;
-
 }

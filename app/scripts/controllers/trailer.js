@@ -26,8 +26,14 @@ angular.module('thepelisApp').controller('TrailerCtrl', function ($scope, $http,
 			$scope.backdrop_path = data.backdrop_path;
 			$scope.hasTrailer = data.trailers.youtube.length;
 			$scope.hasTrailer ? $scope.code = data.trailers.youtube[0].source : "";
-			// $scope.code = data.trailers.youtube[0].source;
-			$scope.bodyStyle = {background: "url(http://image.tmdb.org/t/p/w396{{backdrop_path}}) center no-repeat center center fixed"};
+			// Set order for backgrounds 
+			if ($scope.backdrop_path) {
+				$("body").css("background", 'url(http://image.tmdb.org/t/p/w396'+ $scope.backdrop_path +') ');
+			}else{
+				$("body").css("background", 'url(../images/background.jpg)');
+			}
+			$("body").css("background-repeat", 'no-repeat');
+			$("body").css("background-size", 'cover');
 		})
 
     };
