@@ -27,13 +27,9 @@ angular.module('thepelisApp').controller('TrailerCtrl', function ($scope, $http,
 			$scope.hasTrailer = data.trailers.youtube.length;
 			$scope.hasTrailer ? $scope.code = data.trailers.youtube[0].source : "";
 			// $scope.code = data.trailers.youtube[0].source;
+			$scope.bodyStyle = {background: "url(http://image.tmdb.org/t/p/w396{{backdrop_path}}) center no-repeat center center fixed"};
 		})
 
     };
 
 });
-
-
-
-
-

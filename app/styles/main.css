@@ -3,11 +3,11 @@ body {
   padding-top: 20px;
   padding-bottom: 20px;
   /*background: url(../images/movies.jpg);*/
-  background: url(http://3.bp.blogspot.com/_Lt9FgNveDDo/TMlZvmHhIzI/AAAAAAAAAfU/i7BUnjBOAVE/s1600/background.jpg);
-  -webkit-background-size: cover;
+  /*background: url(http://3.bp.blogspot.com/_Lt9FgNveDDo/TMlZvmHhIzI/AAAAAAAAAfU/i7BUnjBOAVE/s1600/background.jpg);*/
+  /*-webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: cover;*/
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -41,8 +41,13 @@ body {
   background: whitesmoke;
   padding: 40px;
   border-radius: 10px;
+  -webkit-box-shadow: inset 0px 0px 3px 1px rgba(0,0,0,0.8);
+-moz-box-shadow: inset 0px 0px 3px 1px rgba(0,0,0,0.8);
+box-shadow: inset 0px 0px 3px 1px rgba(0,0,0,0.8);
 }
-
+.container.jumbotron {
+background: black;
+}
 /* Customize container */
 @media (min-width: 768px) {
   .container {

@@ -15,22 +15,16 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="thepelisApp">
+  <body ng-app="thepelisApp" ng-style="bodyStyle">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div class="container">
+    <div class="container jumbotron" ng-init="fetchOptions()">
+
       <div class="header">
 
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#" ng-hide="true">Home</a></li>  
-        </ul>
-      
-        <h3 class="text-muted"><a ng-href="#" > Thepelis <span class="glyphicon glyphicon-search"></span></a> </h3>
-
-      
-      </div>
+      <h3 class="text-muted"><a ng-href="#" > Thepelis <span class="glyphicon glyphicon-search"></span></a> </h3></div>
 
       <div ng-view=""></div>
 
