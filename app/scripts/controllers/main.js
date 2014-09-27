@@ -8,19 +8,37 @@
  * Controller of the thepelisApp
  */
 
-// Search for actors, example URL
+// Search for actors, example URL:
 // http://api.themoviedb.org/3/search/person?api_key=7d01deb61b99198006a40696c46d3f29&query=brad%20pitt
 
 angular.module('thepelisApp').controller('MainCtrl', function ($scope, $http) {
-	var isHome = true;
-	var apiUrl = 'http://api.themoviedb.org/3/',
+	var isHome = true,
+		apiUrl = 'http://api.themoviedb.org/3/',
 		mode = 'search/person',
-		apiKey = '?api_key=7d01deb61b99198006a40696c46d3f29&query=';
-		
-		$scope.fetchResults = function(event) {
-	    	$http.get(apiUrl+mode+apiKey+$scope.searchTerm+'&search_type=ngram').success(function(data){
-	    		console.log(data);
-	    		$scope.actors = data.results;
-	    	}) 
+		apiKey = '?api_key=7d01deb61b99198006a40696c46d3f29&query=',
+		// Regex for input validation
+		letters = /^[A-Za-z]+$/; 
+
+		$scope.fetchResults = function(e) {
+			// console.log("evento= " + e.keyCode);
+			//if ( (e.keyCode >= 65 && e.keyCode <= 90) || e.keyCode == 8 || e.keyCode == 46 ) {
+
+   			// if( $scope.searchTerm.match(letters) || ){
+   			if( $scope.searchTerm != "" ){
+
+		    	$http.get(apiUrl+mode+apiKey+$scope.searchTerm+'&search_type=ngram').success(function(data){
+		    		$scope.actors = data.results;
+		    		console.log(data);
+		    	})
+
+			}
+			else {
+				$scope.actors = "";
+			}
 	    };
 });
+
+
+
+
+

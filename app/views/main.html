@@ -1,13 +1,10 @@
 <div class="jumbotron"  ng-init="fetchOptions()">
-  
-  <h2>Find Movies</h2>
-  <br>
-  <h4>Type actor's name</h4>
+  <h4>Type an actor's name</h4>
 
-    <input id="searchBox" ng-model="searchTerm" type="text" ng-keyup='fetchResults()'>
-	<br><br>
-	<div class="list-group actors-list">
-		<a href="/#/actor/{{actor.id}}/{{actor.name}}" class="list-group-item" ng-repeat= "actor in actors">{{actor.name}}</a> 
+    <input id="searchBox" ng-model="searchTerm" type="text" ng-keyup='fetchResults($event)' class="form-control" ng-patterns="/^[a-zA-Z0-9]*$/">
+
+	<div class="list-group actors-list" >
+		<a href="/#/actor/{{actor.id}}/{{actor.name}}" class="list-group-item" ng-repeat="actor in actors">{{actor.name}}</a> 
 	</div>	
 
 </div>

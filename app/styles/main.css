@@ -82,3 +82,13 @@ body {
   max-height: 400px;
   overflow: auto;
 }
+
+a.glyphicon.glyphicon-search {
+  text-decoration: none;
+  font-size: 1.3em;
+  word-spacing: -12px;
+}
+a.moviePoster{
+  background: url(http://d3a8mw37cqal2z.cloudfront.net/assets/e6497422f20fa74a240ad385ea4a2ade/images/no-poster-w92.jpg) no-repeat;
+  display: block;
+}
