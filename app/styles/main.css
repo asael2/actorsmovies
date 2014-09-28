@@ -5,6 +5,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   height: 100%;
   width: 100%;
+  
 }
 body {
   /*background: url(../images/movies.jpg) top left no-repeat;
@@ -12,6 +13,7 @@ body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  background: black;
 }
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header, .marketing, .footer {

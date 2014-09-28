@@ -36,6 +36,8 @@ angular.module('thepelisApp').controller('TrailerCtrl', function ($scope, $http,
     function setfullBg(bgUrlImg){
 		$("body").css('background', 'url('+bgUrlImg+')');
 		$("body").css("background-size", 'cover'); 
+		$("body").css("background-repeat", 'no-repeat'); 
+		$("body").css("background-attachment", 'fixed'); 
 		$("body").css('-webkit-background-size', 'cover');
 		$("body").css('-moz-background-size', 'cover');
 		$("body").css('-o-background-size', 'cover');
