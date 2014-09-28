@@ -7,11 +7,11 @@ html {
   width: 100%;
 }
 body {
-  background: url(../images/movies.jpg) top left no-repeat;
+  /*background: url(../images/movies.jpg) top left no-repeat;
+  background-size: cover;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
 }
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header, .marketing, .footer {
@@ -47,7 +47,8 @@ a.glyphicon.glyphicon-search {
   box-shadow: inset 0px 0px 9px 1px rgba(66,139,202,0.9);
 }
   .container.jumbotron {
-    background: black;
+    /*background: black;*/
+    background: rgba(0, 0, 0, 0.8);
     margin-top: 20px;
   }
   .container-narrow > hr {
@@ -110,6 +111,16 @@ a.glyphicon.glyphicon-search {
 
 .backdrop_path{
   background-repeat:no-repeat;
-  height: 200px;
+  height: 270px;
   width: 100%;
+}
+
+
+.loadingAnim {
+  background: white;
+  position: fixed;
+  height: 102px;
+  width: 332px;
+  top: 0;
+  left: 0;
 }

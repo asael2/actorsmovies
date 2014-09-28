@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <meta name="description" content="">
+    <meta name="description" content="Trailers loader for selected actor">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
@@ -19,25 +19,21 @@
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
     <div class="container jumbotron" ng-init="fetchOptions()">
-
       <div class="header">
-
-      <h3 class="text-muted"><a ng-href="#" > Thepelis <span class="glyphicon glyphicon-search"></span></a> </h3></div>
-
-      <div ng-view=""></div>
-
-      <div class="footer text-right">by <a href="https://twitter.com/asael2" target="blank">@asael2</a> </p></div>
+        <h2 class="text-info"><a ng-href="#"> Thepelis <span class="glyphicon glyphicon-search"></span></a> </h2>
+      </div>
+      <div ng-view=""> 
+        <!-- Views loader --> 
+      </div>
+      <div class="footer text-right">by <a href="https://twitter.com/asael2" target="blank">@asael2</a> powered by <a href="http://www.themoviedb.org/" target="blank">themoviedb</a></div>
     </div>
-
     <!-- build:js(.) scripts/oldieshim.js -->
     <!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.js"></script>
     <![endif]-->
     <!-- endbuild -->
-
     <!-- build:js(.) scripts/vendor.js -->
       <!-- bower:js -->
       <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -52,12 +48,11 @@
       <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
       <!-- endbower -->
     <!-- endbuild -->
-
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/actor.js"></script>
-        <script src="scripts/controllers/trailer.js"></script>
-        <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+      <script src="scripts/app.js"></script>
+      <script src="scripts/controllers/main.js"></script>
+      <script src="scripts/controllers/actor.js"></script>
+      <script src="scripts/controllers/trailer.js"></script>
+    <!-- endbuild -->
   </body>
 </html>

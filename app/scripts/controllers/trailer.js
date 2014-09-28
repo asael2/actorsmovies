@@ -1,5 +1,4 @@
 'use strict';
-
 /**
  * @ngdoc function
  * @name thepelisApp.controller:TrailerCtrl
@@ -7,13 +6,14 @@
  * # TrailerCtrl
  * Controller of the thepelisApp
  */
-
 // Get movie info, example URL:
 // https://api.themoviedb.org/3/movie/1850?api_key=7d01deb61b99198006a40696c46d3f29&append_to_response=trailers
 
 angular.module('thepelisApp').controller('TrailerCtrl', function ($scope, $http, $routeParams) { 
 
-	var movieId = $routeParams.movieId;
+	var movieId = $routeParams.movieId,
+		actorName = $routeParams.actorName,
+		isLoading = true;
 		
 	$scope.getTrailer = function() {
 
@@ -27,15 +27,18 @@ angular.module('thepelisApp').controller('TrailerCtrl', function ($scope, $http,
 			$scope.hasTrailer = data.trailers.youtube.length;
 			$scope.hasTrailer ? $scope.code = data.trailers.youtube[0].source : "";
 			// Set order for backgrounds 
-			if ($scope.backdrop_path) {
-				$("body").css("background", 'url(http://image.tmdb.org/t/p/w396'+ $scope.backdrop_path +') ');
-			}else{
-				$("body").css("background", 'url(../images/background.jpg)');
-			}
-			$("body").css("background-repeat", 'no-repeat');
-			$("body").css("background-size", 'cover');
+			$scope.backdrop_path ? setfullBg('http://image.tmdb.org/t/p/w396'+$scope.backdrop_path) : setfullBg('../images/background.jpg');	
+			isLoading = true;
 		})
 
     };
+
+    function setfullBg(bgUrlImg){
+		$("body").css('background', 'url('+bgUrlImg+')');
+		$("body").css("background-size", 'cover'); 
+		$("body").css('-webkit-background-size', 'cover');
+		$("body").css('-moz-background-size', 'cover');
+		$("body").css('-o-background-size', 'cover');
+	}
 
 });

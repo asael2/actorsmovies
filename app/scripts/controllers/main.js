@@ -12,14 +12,15 @@
 // http://api.themoviedb.org/3/search/person?api_key=7d01deb61b99198006a40696c46d3f29&query=brad%20pitt
 
 angular.module('thepelisApp').controller('MainCtrl', function ($scope, $http) {
-	$("body").css('background', 'url(../images/movies.jpg)');
-
-	var isHome = true,
-		apiUrl = 'http://api.themoviedb.org/3/',
+	
+	// bgSeter      ('../images/movies.jpg');
+	setfullBg('../images/movies.jpg');
+	
+	var apiUrl = 'http://api.themoviedb.org/3/',
 		mode = 'search/person',
-		apiKey = '?api_key=7d01deb61b99198006a40696c46d3f29&query=',
+		apiKey = '?api_key=7d01deb61b99198006a40696c46d3f29&query=';
 		// Regex for input validation
-		letters = /^[A-Za-z]+$/; 
+		// letters = /^[A-Za-z]+$/; 
 
 		$scope.fetchResults = function(e) {
 			var ev = e;
@@ -39,6 +40,16 @@ angular.module('thepelisApp').controller('MainCtrl', function ($scope, $http) {
 				$scope.actors = "";
 			}
 	    };
+
+	function setfullBg(bgUrlImg){
+		$("body").css('background', 'url('+bgUrlImg+')');
+		$("body").css("background-size", 'cover'); 
+		$("body").css("background-repeat", 'no-repeat'); 
+		$("body").css("background-attachment", 'fixed'); 
+		$("body").css('-webkit-background-size', 'cover');
+		$("body").css('-moz-background-size', 'cover');
+		$("body").css('-o-background-size', 'cover');
+	}
 });
 
 
