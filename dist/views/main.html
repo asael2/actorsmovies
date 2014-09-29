@@ -1,0 +1,1 @@
+<div class="jumbotron"> <h4>Type an actor's name</h4> <input id="searchBox" ng-model="searchTerm" type="text" ng-keyup="fetchResults($event)" class="form-control" ng-patterns="/^[a-zA-Z0-9]*$/"> <div class="list-group actors-list"> <a href="/#/actor/{{actor.id}}/{{actor.name}}" class="list-group-item" ng-repeat="actor in actors">{{actor.name}}</a> </div> </div>
