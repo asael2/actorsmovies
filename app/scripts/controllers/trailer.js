@@ -1,20 +1,9 @@
 'use strict';
-/**
- * @ngdoc function
- * @name thepelisApp.controller:TrailerCtrl
- * @description
- * # TrailerCtrl
- * Controller of the thepelisApp
- */
-// Get movie info, example URL:
-// https://api.themoviedb.org/3/movie/1850?api_key=7d01deb61b99198006a40696c46d3f29&append_to_response=trailers
-
 angular.module('thepelisApp').controller('TrailerCtrl', function ($scope, $http, $routeParams) { 
-
+	// $scope.isLoading = true;
 	var movieId = $routeParams.movieId,
-		actorName = $routeParams.actorName,
-		isLoading = true;
-		
+		actorName = $routeParams.actorName;
+
 	$scope.getTrailer = function() {
 
 		$http.get('https://api.themoviedb.org/3/movie/'+movieId+'?api_key=7d01deb61b99198006a40696c46d3f29&append_to_response=trailers').success(function(data){
@@ -26,9 +15,9 @@ angular.module('thepelisApp').controller('TrailerCtrl', function ($scope, $http,
 			$scope.backdrop_path = data.backdrop_path;
 			$scope.hasTrailer = data.trailers.youtube.length;
 			$scope.hasTrailer ? $scope.code = data.trailers.youtube[0].source : "";
-			// Set order for backgrounds 
+			// Set load order for backgrounds 
 			$scope.backdrop_path ? setfullBg('http://image.tmdb.org/t/p/w396'+$scope.backdrop_path) : setfullBg('../images/background.jpg');	
-			isLoading = true;
+			// $scope.isLoading = false;
 		})
 
     };

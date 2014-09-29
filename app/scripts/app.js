@@ -1,13 +1,4 @@
 'use strict';
-
-/**
- * @ngdoc overview
- * @name thepelisApp
- * @description
- * # thepelisApp
- *
- * Main module of the application.
- */
 angular.module('thepelisApp', [
     'ngAnimate',
     'ngCookies',
@@ -59,13 +50,3 @@ angular.module('thepelisApp', [
       }
     };
   });
-  // .factory('setfullBg', function(bgUrlImg){
-  //   $("body").css('background', 'url('+bgUrlImg+')');
-  //   $("body").css("background-size", 'cover'); 
-  //   $("body").css("background-repeat", 'no-repeat'); 
-  //   $("body").css("background-attachment", 'fixed'); 
-  //   $("body").css('-webkit-background-size', 'cover');
-  //   $("body").css('-moz-background-size', 'cover');
-  //   $("body").css('-o-background-size', 'cover'); 
-    // alert("heyyyy");
-  //});
