@@ -1,5 +1,6 @@
 'use strict';
 angular.module('thepelisApp').controller('MainCtrl', function ($scope, $http) {
+	$("#searchBox").focus();
 	//Set Background in Home
 	setfullBg('../images/movies.jpg');
 	document.title = "The Pelis";
