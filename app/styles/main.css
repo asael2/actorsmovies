@@ -15,6 +15,11 @@ body {
   -o-background-size: cover;
   background: black;
 }
+a:hover{
+  text-decoration: none;
+}
+
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header, .marketing, .footer {
     padding-left: 15px;
@@ -126,3 +131,21 @@ a.glyphicon.glyphicon-search {
   top: 0;
   left: 0;
 }
+
+a.backBtn {
+  float: left;
+  margin-top: -100px;
+  text-decoration: none;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+b.ng-binding {
+color: whitesmoke;
+}
+
+
+
+
+
+

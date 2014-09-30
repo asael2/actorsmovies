@@ -44,7 +44,7 @@ angular.module('thepelisApp', [
       link: function (scope) {
         scope.$watch('code', function (newVal) {
           if (newVal) {
-            scope.url = $sce.trustAsResourceUrl("http://www.youtube.com/embed/" + newVal + "?hd=1&rel=0&autohide=1&showinfo=0&autoplay=1");
+            scope.url = $sce.trustAsResourceUrl('http://www.youtube.com/embed/' + newVal + '?hd=1&rel=0&autohide=1&showinfo=0&autoplay=1');
           }
         });
       }

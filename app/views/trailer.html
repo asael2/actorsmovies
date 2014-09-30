@@ -1,3 +1,4 @@
+<a class="glyphicon glyphicon-chevron-left backBtn" ng-click="backBtn()"></a>
 <section id="trailer">
 	<div class="loadingAnim" ng-show="{{isLoading}}"><img src="../images/loading2.gif" alt="Loading"></div>
 
@@ -15,6 +16,11 @@
 		 <!-- List group -->
 		<ul class="list-group text-left">
 			<li class="list-group-item">Release date: {{release_date}}</li>
+			<li class="list-group-item"> Also in this movie: 
+				<ul class="list-inline">
+					<li ng-repeat="actor in cast"> <a href="/#/actor/{{actor.id}}/{{actor.name}}" class="glyphicon glyphicon-circle-arrow-right otrherActor"> {{actor.name}}</a></li>	
+				</ul>
+			</li>
 			<li class="list-group-item">Website: <a href="{{website}}" target="blank"> {{website}} </a></li>
 		</ul>
 	</div>
