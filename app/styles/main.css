@@ -42,7 +42,7 @@ a.glyphicon.glyphicon-search {
 .footer {
   padding-top: 19px;
   color: #777;
-  border-top: 1px solid #e5e5e5;
+/*  border-top: 1px solid #e5e5e5;*/
 }
  
 .container {
@@ -67,6 +67,7 @@ a.glyphicon.glyphicon-search {
   .container {
     max-width: 730px;
   }
+
 }
 
 
@@ -94,6 +95,11 @@ a.glyphicon.glyphicon-search {
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
+.list2cols{
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
   /* Remove the padding we set earlier */
   .header,
   .marketing,
@@ -142,10 +148,11 @@ a.backBtn {
 
 b.ng-binding {
 color: whitesmoke;
+font-weight: normal;
 }
 
 
-
-
-
+.list2cols li{
+  margin: 4px;
+}
 

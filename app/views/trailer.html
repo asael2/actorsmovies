@@ -11,17 +11,20 @@
 	</div>
 
 	<div class="panel panel-default">
-		<div class="panel-heading"><h3>{{title}}</h3></div>
+		<div class="panel-heading"><h3>{{title}}</h3> - {{actorName}} - </div>
 		<div class="panel-body text-justify">{{overview}}</div>
 		 <!-- List group -->
 		<ul class="list-group text-left">
-			<li class="list-group-item">Release date: {{release_date}}</li>
+			<li class="list-group-item">Release date: <b><span class="text-warning">{{releaseDate}}</span></b></li>
 			<li class="list-group-item"> Also in this movie: 
-				<ul class="list-inline">
-					<li ng-repeat="actor in cast"> <a href="/#/actor/{{actor.id}}/{{actor.name}}" class="glyphicon glyphicon-circle-arrow-right otrherActor"> {{actor.name}}</a></li>	
+				<ul class="list2cols">
+					<li ng-repeat="actor in cast" class=""> 
+						<a href="/#/actor/{{actor.id}}/{{actor.name}}" class="otrherActor" ng-hide='actor.name == actorName' > 
+						<img ng-show="actor.profile_path"  src="http://image.tmdb.org/t/p/w45{{actor.profile_path}}" width="24" height="30"> {{actor.name}}</a>
+					</li>	
 				</ul>
 			</li>
-			<li class="list-group-item">Website: <a href="{{website}}" target="blank"> {{website}} </a></li>
+			<li class="list-group-item">Movie Website: <a href="{{website}}" target="blank"> {{website}} </a></li>
 		</ul>
 	</div>
 
